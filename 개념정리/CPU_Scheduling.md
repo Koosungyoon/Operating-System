@@ -20,24 +20,24 @@ MLFQ 스케줄링의 핵심은 우선순위를 정하는 방식이다.
  CPU 연산을 많이 해야하는 Intencive CPU job은 낮은 우선순위를 가진다.
 
 ## MLFQ의 두 가지 기본 규칙은 다음과 같다.
-<span style="color:blueviolet">
+<font color="#8a2be2">
 
 ### 규칙 1: Priority(A) > Priority(B)이면, A가 실행된다.
 ### 규칙 2: Priotiry(A) == Prioriry(B)이면, A,B는 RR 방식으로 실행된다.
 
-</span>
+</font>
 
 그러면... 상대 적으로 우선순위가 높은 프로세스들만 실행되게 된다... 
 
 MLFQ가 작업의 우선순위를 어떻게 바꿀 것인지 결정해야 한다.
 
 ## 시도 1 : 우선순위의 변경
-<span style="color:blueviolet">
+<font color="blueviolet">
 
 ### 규칙 3: 작업이 시스템에 진입하면, 가장 높은 우선순위, 즉 맨위의 큐에 놓여진다.
 ### 규칙 4a: 주어진 타임 슬라이스를 모두 사용하면, 우선순위는 낮아진다. 즉, 한 단계 아래 큐로 이동한다.
 ### 규칙 4b: 타임 슬라이스를 소진하기 전에 CPU를 양도하면 같은 우선순위를 유지한다.
-</span>
+</font>
 
 ![img.png](img.png)  
 검정 작업: A, 회색 작업: B
@@ -71,10 +71,10 @@ CPU를 거의 독점할 수 있다.
 
 간단하게는 주기적으로 모든 작업의 우선순위를 상향 조정(boost)하자.
 
-<span style="color:blueviolet">
+<font color="#8a2be2">
 
 ### 규칙 5: 일정 기간 S가 지나면, 시스템의 모든 작업을 최상위 큐로 올려준다.
-</span>
+</font>
 
 위의 규칙을 통해서 starvation 문제와 CPU 위주의 작업이 대화형 작업으로 특성이 변할 경우 우선순위 상향을 통해 스케쥴러가 변경된 특성에 적합한 스케쥴링 방법을 적용한다.
 
