@@ -16,9 +16,9 @@ CPU Scheduling
 
 MLFQ 스케줄링의 핵심은 우선순위를 정하는 방식이다.
 ----------------------------------------
- 사용자와 상호작용을 해야하는 Interative job은 높은 우선순위를 가지고,
+ 사용자와 상호작용을 해야하는 Interactive job은 높은 우선순위를 가지고,
 
- CPU 연산을 많이 해야하는 Intencive CPU job은 낮은 우선순위를 가진다.
+ CPU 연산을 많이 해야하는 Intensive CPU job은 낮은 우선순위를 가진다.
 
 
 ## MLFQ의 두 가지 기본 규칙은 다음과 같다.
@@ -59,7 +59,7 @@ MLFQ가 작업의 우선순위를 어떻게 바꿀 것인지 결정해야 한다
 ## 1. starvation 
  시스템에 너무 많은 interactive job(대화형 작업)이 많으면, 그 작업들이 CPU 시간을 소모하게 될것이고,
  
-intencive CPU job(CPU 집중 작업)들은 CPU 시간을 할당 받지 못할 것이다.
+intensive CPU job(CPU 집중 작업)들은 CPU 시간을 할당 받지 못할 것이다.
 
 
 ## 2. 자신들에게 유리하게 스케줄러를 조작할 수 있다.
